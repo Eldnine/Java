@@ -1,8 +1,6 @@
 class Solution {
     public int solution(int[] A) {
         // write your code in Java SE 8
-        
-        //get minimum
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < A.length; i++){
             if (min > A[i]) min = A[i];
@@ -15,7 +13,7 @@ class Solution {
         }
         
         int i = 0;
-        while (check[i] !=0){
+        while (i < A.length && check[i] !=0){
             i++;
         }
         return i + min;
