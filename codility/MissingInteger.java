@@ -8,9 +8,9 @@ class Solution {
             if (min > A[i]) min = A[i];
         }
         
-        //
         int[] check = new int[A.length];
         for (int i = 0; i < A.length; i++){
+            if (A[i] - min >= A.length) continue;
             check[A[i] - min]++;
         }
         
